@@ -19,6 +19,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'launchy'
 end
 
 group :development do

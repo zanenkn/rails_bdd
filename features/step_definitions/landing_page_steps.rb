@@ -12,3 +12,7 @@ When("I visit the site") do
   Then("I should see {string}") do |content|
     expect(page).to have_content content
   end
+
+  When (I click "New Article" link) do
+    visit 
+  end

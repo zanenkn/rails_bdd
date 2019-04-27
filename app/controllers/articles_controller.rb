@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params.require(:article).permit(:title, :content))
     
     @article.save
-    redirect_to @article
+    redirect_to @article, notice: "Article was successfully created."
   end
 
   def show

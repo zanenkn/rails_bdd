@@ -9,8 +9,8 @@ Feature: Create articles
     And I should be on New Article page
 
   Scenario: Successfully create an article [Happy Path]
-    When I fill in "article_title" with "Can tigers purr?"
-    And I fill in "article_content" with "British scientists are confused, you will never believe this"
+    When I fill in "Title" with "Can tigers purr?"
+    And I fill in "Content" with "British scientists are confused, you will never believe this"
     And I click "create" button
     Then I should be on "Can tigers purr?" page
     And I should see "Article was successfully created."
@@ -19,5 +19,5 @@ Feature: Create articles
 
   Scenario: Publisher doesn't enter a title for the article [Sad Path]
     When I fill in "Content" with "British scientists are confused, you will never believe this"
-    And I click "Create Article" button
+    And I click "create" button
     Then I should see "Title can't be blank"

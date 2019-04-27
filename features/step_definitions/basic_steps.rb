@@ -23,3 +23,4 @@ end
 And("I click {string} button") do |btn|
     click_button btn
 end
+

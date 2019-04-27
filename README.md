@@ -22,6 +22,14 @@ Write a simple Ruby on Rails app that allows the user to create and view article
 5. Repeat steps 3 and 4 until the high-level test (1) goes green
 6. Start over by writing a new high-level test
 
+## Weekend challenge
+* Read Devise [documentation](https://github.com/plataformatec/devise)
+* Add a login functionality
+* Only allow logged in user to view articles
+    * Feature test
+    * Unit tests
+* Make an WIP pull request towards development branch
+
 <br>
 
 # User stories

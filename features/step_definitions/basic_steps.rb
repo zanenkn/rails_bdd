@@ -19,3 +19,7 @@ end
 When("I fill in {string} with {string}") do |field, data|
     fill_in field, with: data
 end
+
+And("I click {string} button") do |btn|
+    click_button btn
+end

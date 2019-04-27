@@ -4,4 +4,4 @@
   <p><%= article.content %></p>
 <% end %>
 
-<button>New Article</button>
+<%= button_to 'New article', new_article_path, :method => "get" %>

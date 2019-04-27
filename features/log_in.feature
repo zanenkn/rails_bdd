@@ -24,3 +24,19 @@ Feature: Let the user log in
         And I should see "Global warming is stopped"
         And I should see "Plastic in ocean"
         And I should see "Start recycling today"
+
+    Scenario: User fails to log in, wrong password (sad path)
+        When I visit the site
+        Then I should see "You need to sign in or sign up before continuing."
+        And I fill in "user_email" with "zanenkn@gmail.com"
+        And I fill in "user_password" with "Psw12345"
+        And I click "Login" button
+        Then I should see "Invalid Email or password."
+    
+    Scenario: User fails to log in, wrong email (sad path)
+        When I visit the site
+        Then I should see "You need to sign in or sign up before continuing."
+        And I fill in "user_email" with "zan@gmail.com"
+        And I fill in "user_password" with "Psw12345"
+        And I click "Login" button
+        Then I should see "Invalid Email or password."

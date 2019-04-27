@@ -4,15 +4,11 @@ Given("the following articles exists") do |table|
     end
 end
 
-
 When("I visit the site") do
     visit root_path
-  end
-  
-  Then("I should see {string}") do |content|
-    expect(page).to have_content content
-  end
+end
 
-  When (I click "New Article" link) do
-    visit 
-  end
+When ("I click {string} link") do
+
+end
+

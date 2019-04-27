@@ -16,8 +16,8 @@ Feature: Let the user log in
     Scenario: User logs in successfully (happy path)
         When I visit the site
         Then I should see "You need to sign in or sign up before continuing."
-        And I fill in "Username" with "zanenkn"
-        And I fill in "Password" with "Pswrd12345"
+        And I fill in "user_email" with "zanenkn@gmail.com"
+        And I fill in "user_password" with "Pswrd12345"
         And I click "Login" button
         Then I should see "You are logged in succesfully"
         And I should see "A breaking news item"

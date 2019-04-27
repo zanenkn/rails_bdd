@@ -5,7 +5,8 @@ Feature: Create articles
 
   Background:
     Given I visit the site
-    And I click "New Article" button
+    And I click "new_article" link
+    And I should be on "New Article" page
 
   Scenario: Successfully create an article [Happy Path]
     When I fill in "Title" with "Learning Rails 5"

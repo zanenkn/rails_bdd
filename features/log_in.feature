@@ -19,7 +19,7 @@ Feature: Let the user log in
         And I fill in "user_email" with "zanenkn@gmail.com"
         And I fill in "user_password" with "Pswrd12345"
         And I click "Login" button
-        Then I should see "You are logged in succesfully"
+        Then I should see "Signed in successfully."
         And I should see "A breaking news item"
         And I should see "Some really breaking action"
         And I should see "Learn Rails 5"

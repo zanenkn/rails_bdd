@@ -8,7 +8,7 @@ When("I visit the site") do
     visit root_path
 end
 
-When ("I click {string} link") do
-
+And("I click {string} button") do |btn|
+    click_button btn
 end
 

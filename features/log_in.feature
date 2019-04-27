@@ -15,7 +15,7 @@ Feature: Let the user log in
     
     Scenario: User logs in successfully (happy path)
         When I visit the site
-        Then I should see "Log in"
+        Then I should see "You need to sign in or sign up before continuing."
         And I fill in "Username" with "zanenkn"
         And I fill in "Password" with "Pswrd12345"
         And I click "Login" button

@@ -15,3 +15,7 @@ end
 Given("I should be on New Article page") do
     visit new_article_path  
 end
+
+When("I fill in {string} with {string}") do |field, data|
+    fill_in field, with: data
+end

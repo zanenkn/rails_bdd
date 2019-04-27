@@ -21,3 +21,8 @@ Feature: Create articles
     When I fill in "Content" with "British scientists are confused, you will never believe this"
     And I click "create" button
     Then I should see "Title can't be blank"
+  
+  Scenario: Publisher doesn't enter any content for the article [Sad Path]
+    When I fill in "Title" with "Can tigers purr?"
+    And I click "create" button
+    Then I should see "Content can't be blank"

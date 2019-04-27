@@ -1,6 +1,6 @@
 Given("the following articles exists") do |table|
     table.hashes.each do |article|
-        Article.create!(article)
+        FactoryBot.create(:article, article)
     end
 end
 
@@ -24,3 +24,8 @@ And("I click {string} button") do |btn|
     click_button btn
 end
 
+Given("the following user exists") do |table|
+    table.hashes.each do |user|
+        FactoryBot.create(:user, user)
+    end
+end

@@ -12,3 +12,6 @@ And("I click {string} link") do |link|
     click_link link
 end
 
+Given("I should be on New Article page") do
+    visit new_article_path  
+end

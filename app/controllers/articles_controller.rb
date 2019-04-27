@@ -4,13 +4,18 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article = Article.new
   end
 
   def create
     @article = Article.new(params.require(:article).permit(:title, :content))
+
+    if @article.save
+      redirect_to @article, notice: "Article was successfully created."
+    else
+      render :new
+    end
     
-    @article.save
-    redirect_to @article, notice: "Article was successfully created."
   end
 
   def show

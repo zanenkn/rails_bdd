@@ -5,8 +5,8 @@ Feature: Let the user log in
 
     Background:
         Given the following user exists
-            | email             | encrypted_password |
-            | zanenkn@gmail.com | Pswrd12345         |
+            | email             | password      |
+            | zanenkn@gmail.com | Pswrd12345    |
         
         Given the following articles exists
             | title             | content                   |

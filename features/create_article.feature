@@ -4,7 +4,12 @@ Feature: Create articles
   I would like to be able to create articles
 
   Background:
-    Given I visit the site
+    Given the following user exists
+            | email             | password      |
+            | zanenkn@gmail.com | Pswrd12345    |
+
+    And I am logged in as "zanenkn@gmail.com"
+    And I visit the site
     And I click "new_article" link
     And I should be on New Article page
 

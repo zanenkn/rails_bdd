@@ -9,6 +9,11 @@ Feature: List articles on the landing page
       | A breaking news item | Some really breaking action      |
       | Learn Rails 5        | Build awesome rails applications |
     
+    Given the following user exists
+            | email             | password      |
+            | zanenkn@gmail.com | Pswrd12345    |
+
+    Given I am logged in as "zanenkn@gmail.com"
     When I visit the site
     Then I should see "A breaking news item"
     And I should see "Some really breaking action"

@@ -15,7 +15,7 @@ Feature: Delete articles
     And I should see "The content no one wants to see"
     And I should see "Trendy stuff"
     And I should see "People are crazy about this one"
-    When I click the "Delete" link under "Unwanted article"
+    When I click the "Delete" link within "Unwanted article"
     Then I should see "Successfully deleted!"
     Then I should not see "Unwanted article"
     And I should not see "The content no one wants to see"

@@ -24,3 +24,9 @@ And("I click {string} button") do |btn|
     click_button btn
 end
 
+When("I click the {string} link within {string}") do |link, section|
+    id = (Article.find_by(title: section)).id
+    within("//div[id=#{id}]") do
+        click_link link
+    end
+end

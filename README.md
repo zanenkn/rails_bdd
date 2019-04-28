@@ -46,6 +46,18 @@ In order to add relevant content to my news service
 I would like to be able to create articles
 ```
 
+```
+As a visitor,
+In order to see the articles
+I would like to log in
+```
+
+```
+As a visitor,
+In order to log in and view the articles
+I would like to sign up
+```
+
 <br>
 
 # Deployment

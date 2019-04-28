@@ -36,3 +36,17 @@ Feature: Let the user sign up
             And I should not see "Global warming is stopped"
             And I should not see "Plastic in ocean"
             And I should not see "Start recycling today"
+
+        Scenario: User fails to sign up - invalid email address (sad path)
+            When I visit the site
+            Then I should see "You need to sign in or sign up before continuing."
+            And I click "Sign up" link
+            And I fill in "user_email" with "swagge r@gmail.com"
+            And I fill in "user_password" with "Pswrd12345"
+            And I fill in "user_password_confirmation" with "Pswrd12345"
+            And I click "Sign up" button
+            Then I should see "Email is invalid"
+            And I should not see "Breaking news"
+            And I should not see "Global warming is stopped"
+            And I should not see "Plastic in ocean"
+            And I should not see "Start recycling today"

@@ -26,4 +26,4 @@ Feature: Comment on articles
   Scenario: Visitor fails to comment on an article, does not enter any comment (sad path)
     When I fill in "comment_commenter" with "Gothenburger"
     And I click on "Create Comment"
-    Then I should see "Name can not be blank"
+    Then I should see "Failed to post comment. Make sure you fill in 'Name' and 'Comment' fields."

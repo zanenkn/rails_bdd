@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to article_path(@article), notice: "Comment posted successfully."
     else
-      redirect_to article_path(@article), notice: "Failed to post comment. Make sure you fill in 'Name' and 'Comment' fields."
+      redirect_to article_path(@article), notice: "Failed to post comment. Make sure you fill in 'Name' and 'Comment' fields. If you are entering an email, make sure it is valid."
     end
 
   end

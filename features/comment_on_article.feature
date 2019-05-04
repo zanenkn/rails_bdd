@@ -11,6 +11,7 @@ Feature: Comment on articles
     When I visit the site
     Then I should see "Snow in Gothenburg"
     And I should see "Winter strikes back on 3rd of May"
+    When I click the "View" link within "Snow in Gothenburg"
     And I should see "Comment"
     When I fill in "Name" with "Gothenburger"
     And I fill in "Comment" with "Unbelievable!!!"

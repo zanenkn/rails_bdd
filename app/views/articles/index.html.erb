@@ -2,6 +2,8 @@
 <% @articles.each do |article| %>
   <h2><%= article.title %></h3>
   <p><%= article.content %></p>
+  <%= link_to 'View', article_path(article) %>
 <% end %>
+
 
 <%= link_to 'New article', new_article_path, :method => "get", id: "new_article" %>

@@ -13,7 +13,7 @@ Feature: Comment on articles
     And I should see "Winter strikes back on 3rd of May"
     When I click the "View" link within "Snow in Gothenburg"
     And I should see "Comment on article:"
-    When I fill in "Name" with "Gothenburger"
+    When I fill in "Commenter" with "Gothenburger"
     And I fill in "Comment" with "Unbelievable!!!"
-    And I click on "Submit" button
-    Then I should see "Unbelievable!!!" within "Snow in Gothenburg"  
+    And I click on "Create Comment"
+    Then I should see "Unbelievable!!!"

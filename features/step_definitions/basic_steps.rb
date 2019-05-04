@@ -31,3 +31,8 @@ When("I click the {string} link within {string}") do |link, section|
     end
 end
 
+When("I click on {string}") do |string|
+    click_on string
+end
+  
+

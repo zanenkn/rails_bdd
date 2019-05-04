@@ -2,14 +2,29 @@
     <%= content_tag :div, msg, class: name %>
 <% end -%>
 
-<p>
-    <strong>Title:</strong>
+<h2>
     <%= @article.title %>
-</p>
+</h2>
 
 <p>
-    <strong>Text:</strong>
     <%= @article.content %>
 </p>
 
 <%= link_to 'Back', articles_path %>
+
+<br>
+
+<h3>Comment on article:</h2>
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

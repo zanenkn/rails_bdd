@@ -8,12 +8,12 @@ class CommentsController < ApplicationController
     else
       redirect_to article_path(@article), notice: "Failed to post comment. Make sure you fill in 'Name' and 'Comment' fields."
     end
-    
+
   end
  
   private
   def comment_params
-      params.require(:comment).permit(:commenter, :body)
+      params.require(:comment).permit(:commenter, :body, :email)
   end
 
 end

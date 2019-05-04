@@ -20,6 +20,10 @@
     <strong>Name:</strong>
     <%= comment.commenter %>
   </p>
+
+  <p>
+    <%= comment.email %>
+  </p>
  
   <p>
     <strong>Comment:</strong>
@@ -36,6 +40,10 @@
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
   </p>
   <p>
     <%= form.label :comment %><br>

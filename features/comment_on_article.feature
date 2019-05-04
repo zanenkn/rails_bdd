@@ -3,7 +3,7 @@ Feature: Comment on articles
   In order to express my opinion about an article
   I would like to be able to comment on article
 
-  Scenario: Successfully comments on an article
+  Background:
     Given the following articles exists
       | title              | content                            |
       | Snow in Gothenburg | Winter strikes back on 3rd of May  |
@@ -13,9 +13,17 @@ Feature: Comment on articles
     And I should see "Winter strikes back on 3rd of May"
     When I click the "View" link within "Snow in Gothenburg"
     And I should see "Comment on article:"
+
+  
+  Scenario: Successfully comments on an article (happy path)
     When I fill in "comment_commenter" with "Gothenburger"
     And I fill in "comment_body" with "Unbelievable!!!"
     And I click on "Create Comment"
     Then I should see "Comments"
     And I should see "Name: Gothenburger"
     And I should see "Comment: Unbelievable!!!"
+
+  Scenario: Visitor fails to comment on an article, does not enter any comment (sad path)
+    When I fill in "comment_commenter" with "Gothenburger"
+    And I click on "Create Comment"
+    Then I should see "Name can not be blank"

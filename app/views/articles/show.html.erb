@@ -15,22 +15,26 @@
 <br>
 
 <h3>Comments</h2>
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong>Name:</strong>
-    <%= comment.commenter %>
-  </p>
+<% if @article.comments.length > 0 %>
+  <% @article.comments.each do |comment| %>
+    <p>
+      <strong>Name:</strong>
+      <%= comment.commenter %>
+    </p>
 
-  <p>
-    <%= mail_to comment.email %>
-  </p>
- 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-  <br>
-  <br>
+    <p>
+      <%= mail_to comment.email %>
+    </p>
+  
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
+    <br>
+    <br>
+  <% end %>
+<% else %>
+  <p>There are no comments for this article (yet)</p>
 <% end %>
 
 <br>
